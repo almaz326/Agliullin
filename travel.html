@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BashAdventure — Туры по Башкортостану</title>
+
+<link rel="stylesheet" href="travel.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/a2d9d5a64f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header class="header">
+<div class="container header-wrapper">
+
+<div class="logo">
+<i class="fas fa-mountain"></i>
+BashAdventure
+</div>
+
+<nav class="nav">
+<a href="#">Главная</a>
+<a href="#tours">Туры</a>
+<a href="#gallery">Галерея</a>
+<a href="#contacts">Контакты</a>
+</nav>
+
+<button class="login-btn" onclick="openAuth()">
+<i class="fas fa-user"></i>
+Войти
+</button>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="container hero-content">
+
+<span class="badge">ТУРЫ ПО БАШКОРТОСТАНУ</span>
+
+<h1>
+Откройте
+<span>Башкортостан</span>
+</h1>
+
+<p>
+Горы, сплавы, озёра, пещеры и незабываемые приключения.
+</p>
+
+<div class="hero-buttons">
+<button class="primary-btn">Смотреть туры</button>
+<button class="secondary-btn">Подробнее</button>
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat-card">
+<h2>5000+</h2>
+<p>туристов</p>
+</div>
+
+<div class="stat-card">
+<h2>40+</h2>
+<p>маршрутов</p>
+</div>
+
+<div class="stat-card">
+<h2>10+</h2>
+<p>лет опыта</p>
+</div>
+
+<div class="stat-card">
+<h2>24/7</h2>
+<p>поддержка</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="tours" id="tours">
+
+<div class="container">
+
+<h2 class="section-title">Популярные туры</h2>
+
+<div class="tour-grid" id="tourGrid"></div>
+
+</div>
+
+</section>
+
+<section class="gallery-section" id="gallery">
+
+<div class="container">
+
+<h2 class="section-title">Галерея Башкортостана</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-item large">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1464822759085-2f3661248589?q=80&w=1200">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer" id="contacts">
+
+<div class="container">
+
+<h2>BashAdventure</h2>
+
+<p>Туристическая фирма по Башкортостану</p>
+
+</div>
+
+</footer>
+
+<div class="auth-modal" id="authModal">
+
+<div class="auth-box">
+
+<button class="close-btn" onclick="closeAuth()">×</button>
+
+<h2>Авторизация</h2>
+
+<form id="authForm">
+
+<input type="text" id="username" placeholder="Имя" required>
+
+<input type="email" id="email" placeholder="Email" required>
+
+<input type="password" id="password" placeholder="Пароль" required>
+
+<button class="primary-btn auth-submit">
+Войти
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="travel.js"></script>
+
+</body>
+</html>
