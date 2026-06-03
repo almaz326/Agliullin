@@ -152,7 +152,7 @@ BashAdventure
 
 <button class="close-btn" onclick="closeAuth()">×</button>
 
-<h2>Авторизация</h2>
+<h2 id="authTitle">Вход</h2>
 
 <form id="authForm">
 
@@ -162,9 +162,15 @@ BashAdventure
 
 <input type="password" id="password" placeholder="Пароль" required>
 
-<button class="primary-btn auth-submit">
+<button class="primary-btn auth-submit" id="authBtn">
 Войти
 </button>
+
+<p style="text-align:center;margin-top:15px;">
+<span id="switchMode" style="cursor:pointer;color:#facc15;">
+Нет аккаунта? Зарегистрироваться
+</span>
+</p>
 
 </form>
 

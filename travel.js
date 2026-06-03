@@ -95,3 +95,71 @@ document.querySelector('.login-btn').innerHTML = savedUser.name
 }
 
 })
+
+
+let isLogin = true;
+
+window.addEventListener('DOMContentLoaded',()=>{
+
+const authTitle = document.getElementById('authTitle');
+const authBtn = document.getElementById('authBtn');
+const switchMode = document.getElementById('switchMode');
+
+if(switchMode){
+switchMode.addEventListener('click',()=>{
+
+isLogin = !isLogin;
+
+if(isLogin){
+authTitle.textContent='Вход';
+authBtn.textContent='Войти';
+switchMode.textContent='Нет аккаунта? Зарегистрироваться';
+}else{
+authTitle.textContent='Регистрация';
+authBtn.textContent='Зарегистрироваться';
+switchMode.textContent='Уже есть аккаунт? Войти';
+}
+
+});
+}
+
+});
+
+document.getElementById('authForm').addEventListener('submit',(e)=>{
+
+e.preventDefault();
+
+const name=document.getElementById('username').value;
+const email=document.getElementById('email').value;
+const password=document.getElementById('password').value;
+
+if(!isLogin){
+
+localStorage.setItem('bashUser',JSON.stringify({
+name,email,password
+}));
+
+alert('Регистрация успешна!');
+
+}else{
+
+const user=JSON.parse(localStorage.getItem('bashUser'));
+
+if(user && user.email===email && user.password===password){
+
+alert('Добро пожаловать, '+user.name+'!');
+
+document.querySelector('.login-btn').innerHTML=user.name;
+
+}else{
+
+alert('Неверный email или пароль');
+return;
+
+}
+
+}
+
+closeAuth();
+
+});
